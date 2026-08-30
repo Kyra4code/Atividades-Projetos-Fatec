@@ -1,0 +1,28 @@
+# English translations for PACKAGE package.
+# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-23 08:54-0300\n"
+"PO-Revision-Date: 2026-08-23 09:18-0300\n"
+"Last-Translator: <EMAIL@ADDRESS>\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CP1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: aula02.py:13
+msgid "ola mundo"
+msgstr "Hello World"
+msgid "Idioma configurado com sucesso"
+msgstr "Language successfully configured"
+msgid "Qual o tempo percorrido? \n"
+msgstr "What is the time elapsed? \n"
+msgid "Qual a velocidade media percorrida? \n"
+msgstr "What was the average speed? \n"

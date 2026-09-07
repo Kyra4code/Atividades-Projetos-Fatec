@@ -44,6 +44,8 @@ def atividadeA():
     print("Encerrando sistema")
     sleep(1.5)
 
+atividadeA()
+
 def atividadeB():
 
     Inicializacao()
@@ -66,6 +68,7 @@ def atividadeC():
 
     print(TQ)
 
+atividadeC()
 
 def atividadeD():
 
@@ -77,20 +80,13 @@ def atividadeD():
 
     print(Area)
 
+atividadeD()
 
 
 print("ATV_A")
 sleep(3)
-atividadeA()
+
 
 print("ATV_B")
 sleep(3)
 atividadeB()
-
-print("ATV_C")
-sleep(3)
-atividadeC()
-
-print("ATV_D")
-sleep(3)
-atividadeD()

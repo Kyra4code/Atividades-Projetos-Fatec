@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 //fazer uma soma de n numeros ate q o result seja menor q 4k
 int atividade_01(){
 	
@@ -44,7 +43,6 @@ int atividade_02(){
 	int i;
 	int anterior;
 	
-	
 	for(i = 0; i <= 10; i++){
 		soma += i;
 	}
@@ -56,7 +54,7 @@ int main(int argc, char *argv[]) {
 	
 	int response;
 	
-	printf("Digite 1 para soma de n numeros ate o resultado menor que 4000 ou 2 para soma de 10 numeros consecutivos\n");
+	printf("Digite 1 para soma de n numeros ate o resultado menor que 4000\nou\nDigite 2 para soma de 10 numeros consecutivos\n");
 	
 	scanf("%d", &response);
 	
@@ -67,7 +65,9 @@ int main(int argc, char *argv[]) {
 	else if(response == 2){
 		atividade_02();
 	}
+	
 	else{
+		printf("Apenas Digite 1 ou 2.");
 		return 0;
 	}
 	

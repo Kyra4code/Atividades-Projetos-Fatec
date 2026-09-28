@@ -32,15 +32,20 @@ def main():
     calculado = False
 
     while True:
+        
         opcao = menu()
+
         limpar()
 
         if opcao == "0":
+
             while True:
                 a = ler_float("Valor de A: ")
                 if a != 0:
                     break
+
                 print("A não pode ser 0 (não seria equação do 2º grau).")
+
             b = ler_float("Valor de B: ")
             c = ler_float("Valor de C: ")
             calculado = False
@@ -51,10 +56,12 @@ def main():
                 continue
 
             delta = b**2 - 4 * a * c
+
             if delta < 0:
                 x1 = x2 = None
                 calculado = True
                 input("Delta negativo: não há raízes reais. (Enter)")
+
             else:
                 x1 = (-b + sqrt(delta)) / (2 * a)
                 x2 = (-b - sqrt(delta)) / (2 * a)
@@ -62,15 +69,19 @@ def main():
                 input("Cálculo concluído! (Enter)")
 
         elif opcao == "2":
+
             if not calculado:
                 input("Calcule o valor de X primeiro! (Enter)")
+
             elif x1 is None:
                 input("Não há raízes reais para esta equação. (Enter)")
+
             else:
                 print(f"x1 = {x1}\nx2 = {x2}")
                 input("\n(Enter para voltar)")
 
         elif opcao == "3":
+
             if input("Certeza que deseja sair? (S/n) ").lower() != "n":
                 break
 
@@ -78,5 +89,4 @@ def main():
             input("Opção inválida. (Enter)")
 
 
-if __name__ == "__main__":
-    main()
+main()

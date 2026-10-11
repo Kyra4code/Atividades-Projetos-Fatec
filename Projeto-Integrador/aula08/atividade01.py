@@ -1,13 +1,54 @@
-from ast import While
-from urllib import response
-from time import *
+# -*- coding: utf-8 -*-
 import os
-from sys import *
-from math import *
-
+import sys
+from time import sleep
 
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
+
+def lerN1():
+    n1 = float ( input ('Nota1:'))
+    return n1
+
+def lerN2():
+    n2 = float ( input ('Nota2:'))
+    return n2
+
+'''
+
+A palavra get se refere a pegar algum dado.
+A palavra melhor utilizada seria calc ou general_media (media_geral)
+
+'''
+
+def calc_media(n1, n2):
+
+    media = (n1+n2)/2
+    return media
+
+def mostrar(media):
+
+    clear()
+    print(f'\nMédia = {media}')
+    
+    if media < 6: 
+        print('\nAluno Reprovado')
+
+    else:
+        print('\nAluno Aprovado')
+
+        '''
+
+        (DICA !!!)
+
+        Esse sleep nao funciona 
+        (Pelo menos nao no linux). 
+        A melhor opcao seria usar o sleep do modulo python, 
+        ou criar um def assim fiz para o clear)
+
+        '''
+        
+        sleep(5)
 
 
 def menu():
@@ -19,9 +60,9 @@ def menu():
     try:
 
         response = int(input(
-            "1. Inserir o valor do comprimento\n"
-            "2. Calcular o diametro, raio e area\n"
-            "3. Mostrar os valores calculados\n"
+            "1. Inserir as notas dos alunos\n"
+            "2. Calcular a media\n"
+            "3. Mostrar a media\n"
             "4. Sair\n"
             "R:"
         ))
@@ -31,56 +72,49 @@ def menu():
 
     return response
 
+
 def main():
 
-    raio = None
-    diametro = None
-    area = None
-    comprimento = None
-    pi = 3.14
-
+    nota1 = None
+    nota2 = None
+    media = None
 
     while True:
 
         option = menu()
-        
+
         if option == 1:
-
-            clear()
-
-            comprimento = int(input("Insira do comprimento:\nR: "))
+            nota1 = lerN1()
+            nota2 = lerN2()
 
         elif option == 2:
 
-            if comprimento is None:
-                
+            if nota1 is None or nota2 is None:
+
                 clear()
-                input("Por favor, insira o valor do comprimento antes")
+                input("Por favor, insira o as notas antes")
                 continue
 
-            diametro = comprimento
-            raio = diametro/2
-            area = pow(raio, 2) * pi
+            media = calc_media(nota1, nota2)
 
         elif option == 3:
-            if(diametro is None or raio is None or area is None):
-                clear()
-                input("Por favor, Calcule tudo antes.\n")
-                continue
-            
-            clear()
-            print(f"O valor do diametro: {diametro}")
-            print(f"AO valor do raio: {raio}")
-            print(f"O valor da area: {area}")
+        
+            if media is None:
 
-            input("\nPress a keycap")
+                clear()
+                input("Por favor, calcule a media antes")
+                continue
+
+            mostrar(media)
 
         elif option == 4:
+            clear()
             break
 
-
         else:
+            clear()
             input("Opção inválida. (Enter)")
-
+        
 
 main()
+sys.exit 

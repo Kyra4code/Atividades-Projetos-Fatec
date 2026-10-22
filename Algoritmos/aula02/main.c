@@ -15,23 +15,8 @@ long fatorial(int n){
 	return n * fatorial(n-1);
 }
 
-int fibbonachi(int n){
 
-	if(n == 0){
-		return 0;
-	}
-
-	if(n == 1){
-		return 1;
-	}
-
-	return fibbonachi(n-1) + fibbonachi(n-2);
-
-}
-
-
-
-public int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
 
 	//Dps organizar----------------
 	

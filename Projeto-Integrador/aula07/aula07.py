@@ -4,8 +4,6 @@ from time import *
 import os
 from sys import *
 
-#metodo sleep usa segundos
-
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
 

@@ -42,7 +42,7 @@ def atv_1():
         if(check != 0):
             result += i
 
-    print(result)
+    print(f"A soma dos numeros impares e: {result}")
 
 def atv_2():
 
@@ -100,7 +100,7 @@ def atv_2():
             input("Opção inválida. (Enter)")
 
 
-atv_2()
+atv_1()
 
 
 

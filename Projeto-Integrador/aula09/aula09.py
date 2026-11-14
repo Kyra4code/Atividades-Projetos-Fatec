@@ -26,7 +26,7 @@ def controle():
 
 
 
-def atv_a():
+def atv_1():
 
     clear()
     a = int(input("Insira um valor inteiro\n"))
@@ -44,7 +44,7 @@ def atv_a():
 
     print(result)
 
-def atv_b():
+def atv_2():
 
     value = 0
     result = 0 
@@ -100,7 +100,7 @@ def atv_b():
             input("Opção inválida. (Enter)")
 
 
-atv_b()
+atv_2()
 
 
 
